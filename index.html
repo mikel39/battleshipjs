@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battleship</title>
+  </head>
+  <body>
+    <div>
+      <div id="select-ships">
+        <h1>Battleship</h1>
+        <div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row four"></div>
+            <div class="grid-row four"></div>
+            <div class="grid-row four"></div>
+            <div class="grid-row four"></div>
+          </div>
+        </div>
+        <div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row three"></div>
+            <div class="grid-row three"></div>
+            <div class="grid-row three"></div>
+          </div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row three"></div>
+            <div class="grid-row three"></div>
+            <div class="grid-row three"></div>
+          </div>
+        </div>
+        <div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row two"></div>
+            <div class="grid-row two"></div>
+          </div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row two"></div>
+            <div class="grid-row two"></div>
+          </div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row two"></div>
+            <div class="grid-row two"></div>
+          </div>
+        </div>
+        <div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row one"></div>
+          </div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row one"></div>
+          </div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row one"></div>
+          </div>
+          <div class="select-ship" draggable="true">
+            <div class="grid-row one"></div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="random">Random</button>
+          <button id="play">Play</button>
+        </div>
+      </div>
+      <div id="ships-grid"></div>
+      <div id="attack-grid"></div>
+    </div>
+    <dialog id="dialog-winner">
+      <p></p>
+      <button class="reset-button">Replay</button>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

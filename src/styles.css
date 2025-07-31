@@ -1,0 +1,181 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #1e3f5a;
+  --foreground: #cde8f1;
+  --color1: #7eafda;
+  --color2: #4a748c;
+  --color3: #a8d4f3;
+}
+
+body {
+  background-color: var(--background);
+  padding: 20px;
+}
+
+h1 {
+  color: var(--foreground);
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+body > div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+  align-items: center;
+}
+
+#select-ships {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+#select-ships > div {
+  background-color: var(--color3);
+  padding: 16px 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+#select-ships > div > div {
+  display: flex;
+}
+
+.select-ship > div {
+  cursor: pointer;
+}
+
+#select-ships button {
+  align-self: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color2);
+  color: var(--foreground);
+  font-size: 1rem;
+}
+
+div.grid-container {
+  display: grid;
+  grid-template-columns: repeat(11, 36px);
+  grid-template-rows: repeat(11, 36px);
+}
+
+div.grid-container p {
+  color: var(--foreground);
+}
+
+.tags-x {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(10, 36px);
+  justify-items: center;
+  align-content: end;
+}
+
+.tags-x p {
+  margin-bottom: 4px;
+}
+
+.tags-y p {
+  margin-right: 10px;
+}
+
+.tags-y {
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+  display: grid;
+  grid-template-rows: repeat(10, 36px);
+  align-items: center;
+  justify-content: end;
+}
+
+.grid {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  display: grid;
+  grid-template-rows: repeat(10, 36px);
+  grid-template-columns: repeat(10, 36px);
+  border-top: 1px solid var(--color2);
+  border-left: 1px solid var(--color2);
+}
+
+div.grid-row {
+  background-color: var(--color1);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-bottom: 1px solid var(--color2);
+  border-right: 1px solid var(--color2);
+}
+
+.grid-row.four {
+  background-color: #ff9462 !important;
+}
+
+.grid-row.three {
+  background-color: #fff27d !important;
+}
+
+.grid-row.two {
+  background-color: #b9ff80 !important;
+}
+
+.grid-row.one {
+  background-color: #86fff5 !important;
+}
+
+#attack-grid {
+  cursor: pointer;
+}
+
+.grid-row.attacked {
+  background-color: rgb(204, 246, 255);
+}
+
+.grid-row.hitted {
+  background-color: rgb(245, 110, 86);
+}
+
+#ships-grid .grid-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+dialog {
+  margin: auto;
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(43, 51, 94);
+  color: white;
+  font-size: 1.3rem;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+.rotate {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}
